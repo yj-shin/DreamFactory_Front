@@ -34,6 +34,7 @@
 		e.preventDefault();
 		location.href="${pageContext.request.contextPath}/board/getBoardList";
 	});
+
 </script>
 <style>
 body {
@@ -50,7 +51,7 @@ body {
 			<form name="form" id="form" role="form" method="post" action="${pageContext.request.contextPath}/board/saveBoard">
 				<div class="mb-3">
 					<label for="reg_id">프로젝트 선택</label>
-					<select name="select_service" id="select_service" class="form-control" data-style="btn-white">
+					<select name="select_service" id="v" class="form-control" data-style="btn-white">
 							<option value="Selct">선택</option>
 							<option value="1">프로젝트 1</option>
 							<option value="2">프로젝트 2</option>
@@ -58,11 +59,10 @@ body {
 
 					 </select>
 				</div>
-				<div class="mb-3">
+				<div id="display_option" class="mb-3" style="display: none">
 					<label for="content">후원 금액</label>
 					<input type="text" class="form-control" name="reg_id" id="reg_id" placeholder="후원 금액을 입력해 주세요">
 				</div>
-
 			</form>
 			<div>
 				<button type="button" class="btn btn-sm btn-primary" id="btnSave">확인</button> <!-- 저장 링크 코드 수정하기 미완료 !!-->
